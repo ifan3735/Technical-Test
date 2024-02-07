@@ -1,0 +1,32 @@
+/*Write a program that accepts a string as input, capitalizes the first letter of each word in the 
+string, and then returns the result string.*/
+
+#include <stdio.h>
+#include <ctype.h>
+
+void capitalizeFirstLetter(char* str) {
+    int i;
+    for (i = 0; str[i] != '\0'; i++) {
+        
+        if (i == 0) {
+            if (islower(str[i])) {
+                str[i] = toupper(str[i]);
+            }
+        }
+        
+        if (isspace(str[i])) {
+            if (islower(str[i+1])) {
+                str[i+1] = toupper(str[i+1]);
+            }
+        }
+    }
+}
+
+int main() {
+    char input[100];
+    printf("Enter a string: ");
+    fgets(input, sizeof(input), stdin);
+    capitalizeFirstLetter(input);
+    printf("Capitalized string: %s", input);
+    return 0;
+}
