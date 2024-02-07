@@ -17,8 +17,8 @@ for (int i = 0; i < strlen(sentence); i++) {
         sentence[i] == 'A' || sentence[i] == 'E' || sentence[i] == 'I' || sentence[i] == 'O' || sentence[i] == 'U') {
         vowels++;
     }
-}     //iterates through each character of the sentence using a for loop, checking if each character is a vowel ie, both lowercase and uppercase 
-        and increments the vowels count if it is.
+}     /*iterates through each character of the sentence using a for loop, checking if each character is a vowel ie, both lowercase and uppercase 
+        and increments the vowels count if it is.*/
 
 printf("Number of vowels in the sentence: %d\n", vowels);  // prints the number of vowels in the sentence
 
