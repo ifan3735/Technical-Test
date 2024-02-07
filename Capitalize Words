@@ -4,7 +4,7 @@ string, and then returns the result string.*/
 #include <stdio.h>
 #include <ctype.h>
 
-void capitalizeFirstLetter(char* str) {
+void capitalizeFirstLetter(char* str) {   //defines a function capitalizeFirstLetter that takes a string as input 
     int i;
     for (i = 0; str[i] != '\0'; i++) {
         
@@ -12,7 +12,7 @@ void capitalizeFirstLetter(char* str) {
             if (islower(str[i])) {
                 str[i] = toupper(str[i]);
             }
-        }
+        } 
         
         if (isspace(str[i])) {
             if (islower(str[i+1])) {
@@ -20,13 +20,21 @@ void capitalizeFirstLetter(char* str) {
             }
         }
     }
-}
+}             /* uses the islower and toupper functions from the ctype.h 
+              library to check if a character is lowercase and to 
+              convert it to uppercase, respectively.*/
 
 int main() {
+
     char input[100];
-    printf("Enter a string: ");
-    fgets(input, sizeof(input), stdin);
-    capitalizeFirstLetter(input);
-    printf("Capitalized string: %s", input);
+
+    printf("Enter a string: ");  // prompts the user to enter a string
+
+    fgets(input, sizeof(input), stdin);   //reads the input using fgets
+
+    capitalizeFirstLetter(input);  // calls the capitalizeFirstLetter function to capitalize the first letter of each word in the input string
+
+    printf("Capitalized string: %s", input);   //prints the capitalized string.
+
     return 0;
 }
