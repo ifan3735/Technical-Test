@@ -5,7 +5,7 @@ multiples of 5, print "Buzz"; and for numbers that are multiples of both 3 and 5
 #include <stdio.h>
 
 int main() {
-    for (int i = 1; i <= 100; i++) {
+    for (int i = 1; i <= 100; i++) {  //iterates through the numbers from 1 to 100.
         if (i % 3 == 0 && i % 5 == 0) {
             printf("FizzBuzz\n");
         } else if (i % 3 == 0) {
