@@ -1,0 +1,26 @@
+/*Write a program that takes an integer as input and returns an integer with reversed digit 
+ordering.*/
+
+
+#include <stdio.h>
+
+int reverseDigits(int num) {
+    int reversed = 0;   // initialized to 0 to store the reversed number
+    while (num != 0) {     //to iterate until the input number num becomes 0.
+        int digit = num % 10;
+        reversed = reversed * 10 + digit;   //The reversed number is updated by multiplying it by 10
+        num /= 10;   //The last digit is removed from num by dividing it by 10.
+    }
+    return reversed;
+}
+
+int main() {
+    int num;  //store the user input
+    printf("Enter an integer: ");
+    scanf("%d", &num);  //The entered integer is read using and stored in the variable num.
+
+    int reversedNum = reverseDigits(num);
+    printf("Reversed number: %d\n", reversedNum);  //The reversed number is printed to the console using printf.
+
+    return 0;
+}
