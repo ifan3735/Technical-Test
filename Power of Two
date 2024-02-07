@@ -1,0 +1,23 @@
+//Write a program that takes an integer as input and returns true if the input is a power of two.
+
+#include <stdio.h>
+
+int main() {
+int num;
+printf("Enter an integer: ");
+scanf("%d", &num);
+
+if (num <= 0) {
+    printf("False\n");
+} 
+else {
+    if ((num & (num - 1)) == 0) {
+        printf("True\n");
+    } 
+else {
+        printf("False\n");
+    }
+}
+
+return 0;
+}
