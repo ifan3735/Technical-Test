@@ -1,0 +1,20 @@
+//Write a program to generate the Fibonacci sequence up to 100.
+
+#include <stdio.h>
+
+void generateFibonacciSequence() {
+    int a = 0, b = 1, nextTerm = 0;
+    printf("Fibonacci sequence up to 100:\n");
+    while (nextTerm <= 100) {
+        printf("%d, ", nextTerm);
+        a = b;
+        b = nextTerm;
+        nextTerm = a + b;
+    }
+}
+
+
+int main() {
+    generateFibonacciSequence();
+    return 0;
+}
