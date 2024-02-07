@@ -2,7 +2,12 @@
 
 #include <stdio.h>
 
-void generateFibonacciSequence() {
+void generateFibonacciSequence() {  /* defines a function generateFibonacciSequence,  
+                                       which is responsible for generating and
+                                       printing the Fibonacci sequence up to the number 100.*/
+                                     
+
+ 
     int a = 0, b = 1, nextTerm = 0;
     printf("Fibonacci sequence up to 100:\n");
     while (nextTerm <= 100) {
